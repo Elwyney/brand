@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+@font-face {
+    font-family: "Montserrat-Black";
+    src: url('./assets/font/Montserrat/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url('./assets/font/Montserrat/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url('./assets/font/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Redular";
+    src: url('./assets/font/Lato/Lato-Regular.ttf');
+}
+
+
+// 
+.callback h1 {
+    font-family: "Montserrat-Bold";
+}
+
+.target-text-title h2,
+.overview-wrap p,
+.btn-callback,
+.advantages-box h2,
+.callback span {
+    font-family: "Montserrat-Regular";
+    margin-bottom: 10px;
+}
+
+.brandbook-description,
+.overview-box,
+.target-description,
+.target-number,
+.advantages-box span {
+    font-family: "Lato-Redular";
+}
+
+
+// 
+.container {
+    max-width: 1178px;
+    margin: 0 auto;
+    padding: 0 18px;
+}
+
+body {
+    background: #EDF2F4;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+.brandbook-description,
+.target-text-title h2,
+.callback span {
+    font-size: 20px;
+}
+
+.btn-callback,
+.target-description,
+.advantages-box span,
+.overview-box span:nth-child(2) {
+    font-size: 18px;
+}
+
+.bread-crumbs {
+    font-family: "Montserrat-Regular";
+}
+
+.navigation,
+.bread-crumbs a {
+    color: #1A2023;
+}
+
+// header
+.header {
+    @include flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header-wrap {
+    @include flex;
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+    top: 50px;
+}
+
+// navigation
+.navigation {
+    @include flex;
+    font-family: "Montserrat-Regular";
+    gap: 50px;
+
+    a {
+        color: black;
+    }
+}
+
+// main
+.title-medium {
+    margin-bottom: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-family: "Montserrat-Bold";
+}
+
+.brand-book-section {
+    background: rgba(153, 175, 185, 0.20);
+}
+
+.brandbook-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.brandbook-container-q {
+    @include flex;
+}
+
+.brandbook-title {
+    font-size: 43px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Montserrat-Black";
+}
+
+.brandbook-description,
+
+.brandbook-description {
+    margin: 20px 0 40px 0;
+}
+
+.brandbook-image {
+    width: 500px;
+}
+
+// 
+.overview {
+    padding-top: 100px;
+}
+
+.overview-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+        width: 500px;
+        margin-top: 110px;
+        font-size: 20px;
+    }
+}
+
+.overview-box {
+    width: 462px;
+    margin-bottom: 66px;
+    padding: 19px 30px;
+    @include flex;
+    gap: 30px;
+}
+
+.number {
+    background-color: white;
+    min-width: 56px;
+    height: 56px;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+
+.overview-box:nth-child(1) span:nth-child(2),
+.overview-box:nth-child(6) span:nth-child(2) {
+    color: white;
+}
+
+.overview-box:nth-child(1) {
+    transform: translate(-90px, 0);
+    background: #A585FF;
+}
+
+.overview-box:nth-child(2) {
+    transform: translate(-180px, 0);
+    background: #E5E7E7;
+}
+
+.overview-box:nth-child(3) {
+    transform: translate(-270px, 0);
+    background: #FAFF00;
+}
+
+.overview-box:nth-child(4) {
+    transform: translate(-360px, 0);
+    background: #C3D0D6;
+}
+
+.overview-box:nth-child(5) {
+    transform: translate(-450px, 0);
+    background: #FFDA0A;
+}
+
+.overview-box:nth-child(6) {
+    transform: translate(-540px, 0);
+    background: rgba(75, 98, 106, 0.82);
+    word-break: break-all;
+}
+
+// 
+.target-container {
+    @include flex;
+    gap: 0 50px;
+}
+
+.target-text-title {
+    margin-bottom: 10px;
+}
+
+.target-description {
+    max-width: 401px;
+    display: block;
+}
+
+.target-text {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 50px;
+}
+
+.target-text:nth-child(5) {
+    margin-bottom: 0;
+}
+
+.target-number {
+    color: #C3C3C3;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+// 
+.advantages-block {
+    padding: 100px 0;
+}
+
+.advantages-block-container {
+    @include flex;
+    justify-content: center;
+
+    &>div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 17px 20px;
+        margin-right: 16px;
+        width: 745px;
+    }
+}
+
+.advantages-box {
+    background: white;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+
+}
+
+.advantages-box:nth-child(1) {
+    max-width: 258px;
+}
+
+.advantages-box:nth-child(2) {
+    max-width: 403px;
+}
+
+.advantages-box:nth-child(3) {
+    max-width: 347px;
+}
+
+.advantages-box:nth-child(4) {
+    background-color: #FAFF00;
+    max-width: 315px;
+}
+
+.advantages-box span {
+    max-width: 419px;
+}
+
+// footer
+footer {
+    background: #C3D0D6;
+}
+
+.footer {
+    @include flex;
+    justify-content: space-between;
+    padding-top: 50px;
+
+    img {
+        width: 735px;
+    }
+}
+
+.callback {
+
+    h1,
+    .btn-callback {
+        text-transform: uppercase;
+    }
+
+    span {
+        display: block;
+        margin: 20px 0 50px 0;
+    }
+}
+
+.btn-callback {
+    border-radius: 0px 50px 50px 50px;
+    background: #FAFF00;
+    padding: 12px 44px;
+    display: inline-block;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+// mobile version
+@media(max-width: 1200px) {
+    header {
+        display: none;
+    }
+
+    .advantages-block-container>div {
+        justify-content: center;
+    }
+
+    .advantages-box span {
+        max-width: 419px;
+    }
+
+    .target-container img {
+        border-radius: 50px 0 0 0;
+    }
+
+    .overview-box {
+        transform: translate(0px, 0px) !important;
+        width: auto;
+    }
+
+    .footer {
+        img {
+            width: 500px;
+        }
+    }
+
+    .advantages-block-container {
+        img {
+            display: none;
+        }
+
+        &>div {
+            margin-right: 0;
+        }
+    }
+}
+
+@media(max-width: 800px) {
+
+    .brandbook-image,
+    .footer img {
+        display: none;
+    }
+
+    .target-container img {
+        display: none;
+    }
+
+    .overview-wrap p {
+        display: none;
+    }
+
+    .advantages-box {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .footer {
+        padding: 60px 0;
+    }
+}
+
+@media(max-width: 480px) {
+
+    .brandbook-description,
+    .callback span,
+    .target-description,
+    .btn-callback,
+    .advantages-box span {
+        font-size: 16px;
+    }
+
+    .title-medium,
+    .callback h1 {
+        font-size: 22px;
+    }
+
+    .brandbook-title {
+        font-size: 36px;
+    }
+
+    .bread-crumbs {
+        margin-bottom: 30px;
+    }
+
+    .footer {
+        justify-content: center;
+    }
+
+    .callback span {
+        margin: 20px 0 30px 0;
+    }
+}
+
+// команда для запуска компиляции sass style.scss style.css
